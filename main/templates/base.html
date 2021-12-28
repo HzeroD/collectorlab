@@ -11,11 +11,11 @@
     type="image/png"
     href="{% static 'images/splash.svg' %}"
   >
-  <title>Cat Collector</title>
+  <title>Farm Animal Collector</title>
   <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
   <img 
   src="{% static 'images/header-logo.svg' %}" 
-  alt="The Cat Collector Logo"
+  alt="The Farm Animal Collector Logo"
 >
   {% block head %}
   {% endblock %}
@@ -26,15 +26,15 @@
       <a href="/">
         <img 
           src="" 
-          alt="The Cat Collector Logo"
+          alt="The animal Collector Logo"
         >
       </a>
     </div>
     <nav>
       <ul>
        
-        <li><a href="{% url 'cats_index' %}">All Cats</a></li>
-
+        <li><a href="{% url 'animals_index' %}">All animals</a></li>
+        <li><a href="{% url 'animals_create' %}">Add a animal</a></li>
         <li><a href="{% url 'about' %}">About</a></li>
       </ul>
     </nav>
