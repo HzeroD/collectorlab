@@ -8,16 +8,18 @@
 {% block content %}
 
 <div class="page-header">
-  <h1>Add a farm animal</h1>
+    {% if object %}
+    <h1>Edit {{object.name}}</h1>
+  {% else %}
+    <h1>Add a Farm Animal</h1>
+ 
+  
   <img src="{% static 'images/nerd-animal.svg' %}" alt="A animal using a computer"/>
+  {% endif %}
 </div>
-{% comment %} 
-  Leaving the action empty makes the form post to the same url used to display it
-{% endcomment %}
+
 <form action="" method="post" class="form-container">
-  {% comment %} 
-    Django requires the following for security purposes
-  {% endcomment %}
+  
   {% csrf_token %}
   <table>
     {% comment %}
